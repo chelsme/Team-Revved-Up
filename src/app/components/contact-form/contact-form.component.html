@@ -1,3 +1,4 @@
+<h3 class="header">Get in Touch With Us</h3>
 <form
   [formGroup]="contactForm"
   name="contact"
@@ -8,35 +9,39 @@
   <div style="display: none;">
     <input name="bot-field" />
   </div>
-
-  <app-input
-    *ngFor="let input of inputs"
-    [name]="input.name"
-    [type]="input.type"
-    [formControlName]="input.name"
-    required
-  ></app-input>
-  <!-- <input
+  <input
     class="form-row"
     type="text"
     name="name"
     formControlName="name"
     required
   />
-  <input
-    class="form-row"
-    type="email"
-    name="email"
-    formControlName="email"
-    required
-  />
-  <input class="form-row" type="text" name="phone" formControlName="phone" />
+  <div class="short-row">
+    <input
+      class="form-row"
+      type="email"
+      name="email"
+      formControlName="email"
+      required
+    />
+    <input
+      class="form-row"
+      type="text"
+      name="phone"
+      formControlName="phone"
+      required
+    />
+  </div>
   <textarea
     class="form-row textarea"
     id="message"
     name="message"
     formControlName="message"
     required
-  ></textarea> -->
-  <app-button text="Let's Do This"></app-button>
+  ></textarea>
+  <app-button
+    text="Let's Do This"
+    type="submit"
+    [isActive]="contactForm.valid"
+  ></app-button>
 </form>

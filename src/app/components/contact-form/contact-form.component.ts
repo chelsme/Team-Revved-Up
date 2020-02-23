@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { FormGroup, FormControl } from '@angular/forms'
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient, HttpParams } from '@angular/common/http'
 
 @Component({
@@ -8,18 +8,11 @@ import { HttpClient, HttpParams } from '@angular/common/http'
   styleUrls: ['./contact-form.component.scss'],
 })
 export class ContactFormComponent implements OnInit {
-  inputs: object[] = [
-    { name: 'name', type: 'text' },
-    { name: 'email', type: 'text' },
-    { name: 'phone', type: 'tel' },
-    { name: 'message', type: 'text' },
-  ]
-
   contactForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    message: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    message: new FormControl('', Validators.required),
   })
 
   constructor(private http: HttpClient) {}

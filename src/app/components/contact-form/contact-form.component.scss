@@ -1,11 +1,35 @@
+.header {
+  margin-bottom: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-row {
   border: 1px solid var(--border);
   border-radius: 5px;
-  height: 50px;
-  width: 550px;
+  font-size: 20px;
+  height: 30px;
+  padding: 10px;
+}
+
+.short-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  input {
+    width: 44%;
+  }
 }
 
 .textarea {
   height: 240px;
   resize: none;
+}
+
+app-button {
+  margin-top: 30px;
 }

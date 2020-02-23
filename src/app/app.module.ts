@@ -13,8 +13,7 @@ import { HeroComponent } from './containers/hero/hero.component'
 import { TestimonialsComponent } from './containers/testimonials/testimonials.component'
 import { ContactComponent } from './containers/contact/contact.component'
 import { ServicesComponent } from './containers/services/services.component'
-import { TeamComponent } from './containers/team/team.component';
-import { InputComponent } from './components/input/input.component'
+import { TeamComponent } from './containers/team/team.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +27,6 @@ import { InputComponent } from './components/input/input.component'
     ContactComponent,
     ServicesComponent,
     TeamComponent,
-    InputComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

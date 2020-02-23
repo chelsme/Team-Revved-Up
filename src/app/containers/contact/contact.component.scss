@@ -5,11 +5,23 @@
   width: 100%;
 
   .form,
-  .map {
+  .location {
     width: 50%;
   }
 
   hr {
     margin: 0 50px;
+  }
+
+  .map {
+    border-radius: 5px;
+  }
+
+  h3 {
+    margin: 50px 0 30px;
+  }
+
+  p {
+    margin-bottom: 20px;
   }
 }
