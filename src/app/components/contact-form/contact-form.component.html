@@ -8,7 +8,14 @@
   <div style="display: none;">
     <input name="bot-field" />
   </div>
-  <input
+
+  <app-input
+    *ngFor="let input of inputs"
+    [name]="input.name"
+    [type]="input.type"
+    [formControlName]="input.name"
+  ></app-input>
+  <!-- <input
     class="form-row"
     type="text"
     name="name"
@@ -22,15 +29,13 @@
     formControlName="email"
     required
   />
-  <input class="form-row" type="text" name="art" formControlName="art" />
+  <input class="form-row" type="text" name="phone" formControlName="phone" />
   <textarea
     class="form-row textarea"
     id="message"
     name="message"
     formControlName="message"
     required
-  ></textarea>
-  <div id="button-row">
-    <button type="submit">Contact Me!</button>
-  </div>
+  ></textarea> -->
+  <app-button text="Let's Do This"></app-button>
 </form>
