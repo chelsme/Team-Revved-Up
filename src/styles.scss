@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --text: #000000;
+  --red: #8e0000;
+  --button-red: #c62828;
+  --grey: #333333;
+  --border: #cccccc;
+  --white: #ffffff;
+  --background-1: #f7f7f7;
+  --background-2: #d8d8d8;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: 'Lato';
+  margin: 0;
+  font-size: 16px;
+  // padding: 0 30px;
+  // max-width: 1200px;
+
+  h1,
+  h2,
+  h3,
+  p {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  background-color: var(--grey);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 50px 30px 100px;
+    width: 100%;
+
+    .line {
+      background-color: var(--border);
+      height: 1px;
+      margin: 50px 0;
+      width: 100%;
+    }
+
+    .logo {
+      height: 70px;
+    }
+  }
+}

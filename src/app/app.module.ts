@@ -6,11 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
+    HeaderComponent,
+    FooterComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
