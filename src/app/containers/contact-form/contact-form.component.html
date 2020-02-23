@@ -1,0 +1,36 @@
+<form
+  [formGroup]="contactForm"
+  name="contact"
+  method="post"
+  (ngSubmit)="onSubmit()"
+>
+  <input class="form-row" type="hidden" name="form-name" value="contact" />
+  <div style="display: none;">
+    <input name="bot-field" />
+  </div>
+  <input
+    class="form-row"
+    type="text"
+    name="name"
+    formControlName="name"
+    required
+  />
+  <input
+    class="form-row"
+    type="email"
+    name="email"
+    formControlName="email"
+    required
+  />
+  <input class="form-row" type="text" name="art" formControlName="art" />
+  <textarea
+    class="form-row textarea"
+    id="message"
+    name="message"
+    formControlName="message"
+    required
+  ></textarea>
+  <div id="button-row">
+    <button type="submit">Contact Me!</button>
+  </div>
+</form>

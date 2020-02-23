@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  padding: 50px 0 100px;
+  width: 100%;
+
+  .form,
+  .map {
+    width: 50%;
+  }
+
+  hr {
+    margin: 0 50px;
+  }
+}
