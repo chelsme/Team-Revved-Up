@@ -1,0 +1,44 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 550px;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 50%;
+    z-index: 10;
+
+    p,
+    app-button {
+      margin: 15px 0;
+    }
+
+    .large-text {
+      font-size: 36px;
+    }
+    .med-text {
+      font-size: 20px;
+    }
+  }
+
+  .img {
+    background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0) 22%,
+        rgba(255, 255, 255, 1)
+      ),
+      url('../../assets/hero-tile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+  }
+}

@@ -5,8 +5,8 @@
   --grey: #333333;
   --border: #cccccc;
   --white: #ffffff;
-  --background-1: #f7f7f7;
-  --background-2: #d8d8d8;
+  --light-grey: #f7f7f7;
+  --med-grey: #d8d8d8;
 }
 
 body {
@@ -15,8 +15,6 @@ body {
   font-family: 'Lato';
   margin: 0;
   font-size: 16px;
-  // padding: 0 30px;
-  // max-width: 1200px;
 
   h1,
   h2,

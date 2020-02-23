@@ -1,56 +1,47 @@
-.container {
-  background-color: var(--grey);
-  color: var(--white);
+header {
+  align-items: center;
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  height: 100px;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
 
-  header {
-    align-items: center;
+  .brand {
     display: flex;
-    height: 100px;
-    justify-content: space-between;
-    max-width: 1200px;
-    padding: 0 30px;
-    width: 100%;
 
-    .brand {
-      display: flex;
-
-      .guy {
-        height: 185px;
-        position: relative;
-        top: 50px;
-      }
-
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 30px;
-
-        h1 {
-          font-size: 30px;
-        }
-        h2 {
-          font-size: 20px;
-        }
-      }
+    .guy {
+      height: 185px;
+      position: relative;
+      top: 50px;
     }
 
-    nav {
+    div {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 30px;
 
-      a {
-        font-size: 18px;
-        padding: 15px 25px;
-        text-decoration: none;
-        &:hover {
-          color: var(--button-red);
-        }
-        &:visited {
-          color: unset;
-        }
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+
+    a {
+      font-size: 18px;
+      padding: 15px 25px;
+      text-decoration: none;
+      &:hover {
+        color: var(--button-red);
+      }
+      &:visited {
+        color: unset;
       }
     }
   }

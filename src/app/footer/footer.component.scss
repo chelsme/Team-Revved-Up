@@ -1,27 +1,19 @@
-.container {
-  background-color: var(--grey);
-  color: var(--white);
+footer {
+  align-items: center;
   display: flex;
-  justify-content: center;
-  width: 100vw;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 50px 30px 100px;
+  width: 100%;
 
-  footer {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    padding: 50px 30px 100px;
+  .line {
+    background-color: var(--border);
+    height: 1px;
+    margin: 50px 0;
     width: 100%;
+  }
 
-    .line {
-      background-color: var(--border);
-      height: 1px;
-      margin: 50px 0;
-      width: 100%;
-    }
-
-    .logo {
-      height: 70px;
-    }
+  .logo {
+    height: 70px;
   }
 }
