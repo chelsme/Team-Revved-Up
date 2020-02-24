@@ -7,6 +7,11 @@ form {
   flex-direction: column;
 }
 
+label {
+  color: var(--red);
+  font-size: 12px;
+}
+
 .form-row {
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -32,4 +37,21 @@ form {
 
 app-button {
   margin-top: 30px;
+}
+
+::placeholder {
+  color: var(--red);
+  font-size: 12px;
+  position: relative;
+  top: -12px;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+textarea::placeholder {
+  position: relative;
+  top: -2px;
 }

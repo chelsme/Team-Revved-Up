@@ -17,6 +17,8 @@ export class ContactFormComponent implements OnInit {
 
   constructor(private http: HttpClient) {}
 
+  ngOnInit() {}
+
   onSubmit() {
     const body = new HttpParams()
       .set('form-name', 'contact')
@@ -50,6 +52,4 @@ export class ContactFormComponent implements OnInit {
         }
       )
   }
-
-  ngOnInit() {}
 }
