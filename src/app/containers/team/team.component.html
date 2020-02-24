@@ -1,1 +1,20 @@
-<p>team works!</p>
+<div class="container">
+  <h3>We’re the Hardest Working Owners You’ll Ever Meet</h3>
+  <div class="team">
+    <profile-panel
+      *ngFor="let member of team"
+      [img]="member.img"
+      [title]="member.title"
+      [subtitle]="member.subtitle"
+      [blurb]="member.blurb"
+    ></profile-panel>
+  </div>
+  <div class="line"></div>
+  <div class="tru">
+    <img src="assets/guage-black.svg" alt="guage" />
+    <p>
+      TeamRevvedUP (TRU). TRU to the words that we speak, TRU to the work that
+      we perform, TRU to the people who stand with us.
+    </p>
+  </div>
+</div>

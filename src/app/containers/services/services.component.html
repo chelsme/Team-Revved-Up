@@ -1,1 +1,29 @@
-<p>services works!</p>
+<div class="container">
+  <div class="header">
+    <h3>Personalized Cleaning Services for the Greater Houston Area</h3>
+    <h5>
+      All of our work is completed with industry-leading products and truck
+      powered equipment, not truck mounts with a lawnmower engine. The truck we
+      drive to you powers the equipment we run, so you can rest assured that we
+      will get the job done.
+    </h5>
+  </div>
+  <div class="services">
+    <profile-panel
+      *ngFor="let member of services"
+      [img]="member.img"
+      [title]="member.title"
+      [subtitle]="member.subtitle"
+      [blurb]="member.blurb"
+    ></profile-panel>
+  </div>
+  <div class="line"></div>
+  <p>We also offer 24-hour emergency damage restoration, so give us a call!</p>
+  <!-- <div class="tru">
+      <img src="assets/guage-black.svg" alt="guage" />
+      <p>
+        TeamRevvedUP (TRU). TRU to the words that we speak, TRU to the work that
+        we perform, TRU to the people who stand with us.
+      </p>
+    </div> -->
+</div>
