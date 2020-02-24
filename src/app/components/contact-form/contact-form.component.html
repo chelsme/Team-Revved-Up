@@ -43,9 +43,6 @@
     placeholder="WHAT HAVE YOU GOT FOR US?"
     required
   ></textarea>
-  <app-button
-    text="Let's Do This"
-    type="submit"
-    [isActive]="contactForm.valid"
-  ></app-button>
+  <app-button text="Let's Do This" type="submit"></app-button>
+  <p *ngIf="showErrorState">HELLO</p>
 </form>

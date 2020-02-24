@@ -14,7 +14,7 @@ export class ServicesComponent implements OnInit {
         'Most homes only need a little freshening up. We use the hot water/extraction method combined with our biodegradable all natural cleaning solutions to achieve jaw-dropping results that will last.',
     },
     {
-      img: 'chance',
+      img: 'grout-tile',
       title: 'Tile and Grout Cleaning',
       blurb:
         "Haven't seen the original color of your grout in a while? We’re here to help! Be sure to ask us how to keep your tile and grout in great shape once we get it looking like new again.",
@@ -66,4 +66,9 @@ export class ServicesComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  goTo(location: string): void {
+    const element = document.getElementById(location)
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }

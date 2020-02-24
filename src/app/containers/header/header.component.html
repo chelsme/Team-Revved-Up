@@ -7,9 +7,9 @@
     </div>
   </div>
   <nav>
-    <a href="#">Who We Are</a>
-    <a href="#">What We Do</a>
-    <a href="#">Customer Testimonials</a>
-    <app-button text="Get in Touch"></app-button>
+    <div class="link" (click)="goTo('team')">Who We Are</div>
+    <div class="link" (click)="goTo('services')">What We Do</div>
+    <!-- <div (click)="goTo('testimonials')">Customer Testimonials</div> -->
+    <app-button text="Get in Touch" (click)="goTo('contact')"></app-button>
   </nav>
 </header>
