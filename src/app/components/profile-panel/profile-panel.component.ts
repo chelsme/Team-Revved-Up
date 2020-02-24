@@ -14,6 +14,6 @@ export class ProfilePanelComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.img = `assets/${this.img}.jpg`
+    this.img = `assets/${this.img}.png`
   }
 }

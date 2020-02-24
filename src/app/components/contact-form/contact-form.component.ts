@@ -24,6 +24,7 @@ export class ContactFormComponent implements OnInit {
     if (!this.contactForm.valid) {
       this.showErrorState = true
     } else {
+      this.showErrorState = false
       const body = new HttpParams()
         .set('form-name', 'contact')
         .append('name', this.contactForm.value.name)

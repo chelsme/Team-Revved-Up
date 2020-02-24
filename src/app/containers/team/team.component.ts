@@ -18,15 +18,13 @@ export class TeamComponent implements OnInit {
       img: 'chance',
       title: 'Chance Spence',
       subtitle: 'Co-Owner/Service Tech',
-      blurb:
-        'With 23 years in the cleaning industry, Jason has worked with clients both commercial and residential. Many of his jobs are repeat clients who ask for him directly. His personal motto is “If you have it in your home, there’s a great chance that I’ve cleaned it.”',
+      blurb: 'More information about Chance coming soon...',
     },
     {
-      img: 'jason',
+      img: 'tyler',
       title: 'Tyler Lambert',
       subtitle: 'Co-Owner/Service Tech',
-      blurb:
-        'With 23 years in the cleaning industry, Jason has worked with clients both commercial and residential. Many of his jobs are repeat clients who ask for him directly. His personal motto is “If you have it in your home, there’s a great chance that I’ve cleaned it.”',
+      blurb: 'More information about Tyler coming soon...',
     },
   ]
 

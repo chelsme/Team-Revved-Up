@@ -38,10 +38,12 @@
     placeholder="WHAT HAVE YOU GOT FOR US?"
     required
   ></textarea>
+  <p class="error" *ngIf="showErrorState">
+    * Please make sure all fields are complete
+  </p>
   <app-button
     text="Let's Do This"
     type="submit"
     (click)="onSubmit()"
   ></app-button>
-  <p *ngIf="showErrorState">HELLO</p>
 </form>
