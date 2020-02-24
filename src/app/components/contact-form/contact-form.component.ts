@@ -21,8 +21,7 @@ export class ContactFormComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    console.log(!this.contactForm.valid && this.contactForm.touched)
-    if (!this.contactForm.valid && this.contactForm.touched) {
+    if (!this.contactForm.valid) {
       this.showErrorState = true
     } else {
       const body = new HttpParams()

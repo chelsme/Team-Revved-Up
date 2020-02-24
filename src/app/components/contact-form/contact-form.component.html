@@ -1,10 +1,5 @@
 <h3 class="header">Get in Touch With Us</h3>
-<form
-  [formGroup]="contactForm"
-  name="contact"
-  method="post"
-  (ngSubmit)="onSubmit()"
->
+<form [formGroup]="contactForm" name="contact" method="post">
   <input class="form-row" type="hidden" name="form-name" value="contact" />
   <div style="display: none;">
     <input name="bot-field" />
@@ -43,6 +38,10 @@
     placeholder="WHAT HAVE YOU GOT FOR US?"
     required
   ></textarea>
-  <app-button text="Let's Do This" type="submit"></app-button>
+  <app-button
+    text="Let's Do This"
+    type="submit"
+    (click)="onSubmit()"
+  ></app-button>
   <p *ngIf="showErrorState">HELLO</p>
 </form>
