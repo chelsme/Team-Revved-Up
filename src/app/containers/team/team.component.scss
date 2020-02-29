@@ -13,6 +13,10 @@
   .team {
     display: flex;
     justify-content: space-between;
+
+    profile-panel {
+      width: 30%;
+    }
   }
 
   .line {
