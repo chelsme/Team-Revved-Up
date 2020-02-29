@@ -49,19 +49,19 @@ export class ServicesComponent implements OnInit {
         'Deep gouges in your hardwood? Want a different feel or color without the cost of replacing? Hardwood floor restoration may be the ticket. If we can make a 120 year old floor look like it was installed last week, I know we can make yours stand out.',
     },
     {
-      img: 'image-coming-soon',
+      img: 'pet-treatment',
       title: 'Pet Treatment',
       blurb:
         'We love our furry friends and they love our soft surfaces. TRU has the products and the know how to get them looking and smelling fresh once more.',
     },
     {
-      img: 'image-coming-soon',
+      img: 'upholstery',
       title: 'Upholstery and Drapes',
       blurb:
         "If your favorite seat on the sofa doesn't look like the rest of the sofa any more or you spilled a little something on that armchair, we’ve got you!",
     },
     {
-      img: 'image-coming-soon',
+      img: 'vertical-surfaces',
       title: 'Vertical Surfaces',
       blurb:
         'Is your kitchen backsplash coated in hard to clean grease? Shower walls not as shiny as the day you fell in love with that walk-in shower? We have the tools to clean vertical surfaces as well.',

@@ -51,3 +51,14 @@
     text-align: center;
   }
 }
+
+a {
+  color: var(--button-red);
+  text-decoration: none;
+  &:hover {
+    color: var(--button-red);
+  }
+  &:visited {
+    color: unset;
+  }
+}

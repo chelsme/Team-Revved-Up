@@ -15,21 +15,23 @@ export class TeamComponent implements OnInit {
     {
       img: 'jason',
       title: 'Jason Jones',
-      subtitle: 'Co-Owner/Service Tech',
+      subtitle: 'CEO/Service Technician',
       blurb:
-        'With 23 years in the cleaning industry, Jason has worked with clients both commercial and residential. Many of his jobs are repeat clients who ask for him directly. His personal motto is “If you have it in your home, there’s a great chance that I’ve cleaned it.”',
+        'After 23 years in the cleaning industry, there are not many things that Jason has not had a hand in cleaning. In the beginning of his career, he focused on commercial carpeting, and is a deft hand at hard surface and air duct cleaning. Having worked his way up to General Manager of a major carpet cleaner in Houston, he feels that it has been a long time coming that he finally started his own business, and ended the cycle of inefficiency that has plagued him at other companies.',
     },
     {
       img: 'chance',
       title: 'Chance Spence',
-      subtitle: 'Co-Owner/Service Tech',
-      blurb: 'More information about Chance coming soon...',
+      subtitle: 'CFO/Service Technician',
+      blurb:
+        'With 10+ years of experience cleaning carpet and hard surfaces, Chance brings a business management background to the team. He wants anyone who looks at this website to know that the images that you see here are our actual work, not some stock photos that were pulled from the internet. This team takes pride in everything that they do.',
     },
     {
       img: 'tyler',
       title: 'Tyler Lambert',
-      subtitle: 'Co-Owner/Service Tech',
-      blurb: 'More information about Tyler coming soon...',
+      subtitle: 'COO/Service Technician',
+      blurb:
+        "Being trained by one of the industry’s best has made Tyler a well rounded technician at a young age. Tyler's can-do attitude and problem solving techniques have launched him to the very top of every division that he has entered.",
     },
   ]
 
