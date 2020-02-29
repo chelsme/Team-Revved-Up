@@ -20,11 +20,10 @@ nav {
 
 .mobile {
   flex-direction: column;
-  padding-left: calc(50vw - 200px);
   padding-top: calc(50vh - 88px);
   width: 400px;
 
   .link {
-    padding: 20px;
+    padding-bottom: 40px;
   }
 }
