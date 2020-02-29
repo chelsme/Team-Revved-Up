@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'app-services',
@@ -6,6 +8,9 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent implements OnInit {
+  isMobile: boolean
+  mobileSubscription: Subscription
+
   services = [
     {
       img: 'carpet-cleaning',
@@ -63,9 +68,17 @@ export class ServicesComponent implements OnInit {
     },
   ]
 
-  constructor() {}
+  constructor(private appService: AppService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.mobileSubscription = this.appService.isMobile.subscribe(
+      isMobile => (this.isMobile = isMobile)
+    )
+  }
+
+  ngOnDestroy() {
+    this.mobileSubscription.unsubscribe()
+  }
 
   goTo(location: string): void {
     const element = document.getElementById(location)
