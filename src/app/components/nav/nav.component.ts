@@ -3,23 +3,27 @@ import { Subscription } from 'rxjs'
 import { AppService } from 'src/app/app.service'
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class NavComponent implements OnInit {
   hamburgerMenu: boolean
   hamburgerMenuSubscription: Subscription
 
   constructor(private appService: AppService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.hamburgerMenuSubscription = this.appService.hamburgerMenu.subscribe(
       hamburgerMenu => (this.hamburgerMenu = hamburgerMenu)
     )
   }
 
-  ngOnDestroy() {
-    this.hamburgerMenuSubscription.unsubscribe()
+  goTo(location: string): void {
+    this.appService.hamburgerOpen.next(false)
+    const element = document.getElementById(location)
+    setTimeout(() => {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 20)
   }
 }

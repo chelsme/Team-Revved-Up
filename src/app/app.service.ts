@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, fromEvent } from 'rxjs'
 export class AppService {
   public hamburgerMenu = new BehaviorSubject<boolean>(window.innerWidth <= 700)
   public isMobile = new BehaviorSubject<boolean>(window.innerWidth <= 700)
+  public hamburgerOpen = new BehaviorSubject<boolean>(false)
   private resizeObservable: Observable<Event>
 
   constructor() {

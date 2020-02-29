@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'hamburger-menu',
@@ -7,12 +9,21 @@ import { Component, OnInit } from '@angular/core'
 })
 export class HamburgerMenuComponent implements OnInit {
   hamburgerOpen: boolean = false
+  hamburgerOpenSubscription: Subscription
 
-  constructor() {}
+  constructor(private appService: AppService) {}
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.hamburgerOpenSubscription = this.appService.hamburgerOpen.subscribe(
+      hamburgerOpen => (this.hamburgerOpen = hamburgerOpen)
+    )
+  }
+
+  ngOnDestroy() {
+    this.hamburgerOpenSubscription.unsubscribe()
+  }
 
   toggleHamburgerMenu() {
-    this.hamburgerOpen = !this.hamburgerOpen
+    this.appService.hamburgerOpen.next(!this.hamburgerOpen)
   }
 }

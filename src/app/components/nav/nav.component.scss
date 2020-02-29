@@ -1,0 +1,29 @@
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 475px;
+
+  .link {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    &:hover {
+      color: var(--button-red);
+    }
+    &:visited {
+      color: unset;
+    }
+  }
+}
+
+.hamburger-nav {
+  flex-direction: column;
+  padding: calc(50vh - 88px);
+  width: unset;
+
+  .link {
+    padding: 20px;
+  }
+}

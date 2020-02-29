@@ -1,3 +1,8 @@
+.main-container {
+  position: fixed;
+  overflow: hidden;
+}
+
 .page-container {
   color: var(--text);
   display: flex;

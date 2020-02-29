@@ -9,7 +9,9 @@ import { AppService } from './app.service'
 })
 export class AppComponent implements OnInit, OnDestroy {
   isMobile: boolean
+  hamburgerOpen: boolean
   mobileSubscription: Subscription
+  hamburgerOpenSubscription: Subscription
 
   constructor(private appService: AppService) {}
 
@@ -17,9 +19,13 @@ export class AppComponent implements OnInit, OnDestroy {
     this.mobileSubscription = this.appService.isMobile.subscribe(
       isMobile => (this.isMobile = isMobile)
     )
+    this.hamburgerOpenSubscription = this.appService.hamburgerOpen.subscribe(
+      hamburgerOpen => (this.hamburgerOpen = hamburgerOpen)
+    )
   }
 
   ngOnDestroy() {
     this.mobileSubscription.unsubscribe()
+    this.hamburgerOpenSubscription.unsubscribe()
   }
 }

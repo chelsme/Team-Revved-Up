@@ -15,7 +15,8 @@ import { ContactComponent } from './containers/contact/contact.component'
 import { ServicesComponent } from './containers/services/services.component'
 import { TeamComponent } from './containers/team/team.component'
 import { ProfilePanelComponent } from './components/profile-panel/profile-panel.component'
-import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component'
+import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component';
+import { NavComponent } from './components/nav/nav.component'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-me
     TeamComponent,
     ProfilePanelComponent,
     HamburgerMenuComponent,
+    NavComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

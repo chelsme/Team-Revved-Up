@@ -22,24 +22,4 @@ header {
       padding-left: 30px;
     }
   }
-
-  nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 475px;
-
-    .link {
-      color: var(--white);
-      cursor: pointer;
-      font-size: 18px;
-      text-decoration: none;
-      &:hover {
-        color: var(--button-red);
-      }
-      &:visited {
-        color: unset;
-      }
-    }
-  }
 }
