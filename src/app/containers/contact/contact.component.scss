@@ -1,4 +1,5 @@
-.container {
+.container,
+.mobile {
   display: flex;
   max-width: 1200px;
   padding: 50px 0 100px;
@@ -27,5 +28,26 @@
 
   iframe {
     max-width: 100%;
+  }
+}
+
+.mobile {
+  flex-direction: column;
+
+  .form,
+  .location,
+  iframe {
+    width: 100%;
+  }
+
+  .line {
+    background-color: var(--grey);
+    height: 1px;
+    margin: 50px 0;
+    width: 100%;
+  }
+
+  .text {
+    text-align: center;
   }
 }

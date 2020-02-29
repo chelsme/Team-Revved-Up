@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'app-hero',
@@ -6,9 +8,20 @@ import { Component, OnInit } from '@angular/core'
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
-  constructor() {}
+  isMobile: boolean
+  mobileSubscription: Subscription
 
-  ngOnInit(): void {}
+  constructor(private appService: AppService) {}
+
+  ngOnInit() {
+    this.mobileSubscription = this.appService.isMobile.subscribe(
+      isMobile => (this.isMobile = isMobile)
+    )
+  }
+
+  ngOnDestroy() {
+    this.mobileSubscription.unsubscribe()
+  }
 
   goTo(location: string): void {
     const element = document.getElementById(location)

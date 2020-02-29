@@ -1,6 +1,7 @@
-<div class="container">
+<div [class]="isMobile ? 'mobile' : 'container'">
   <contact-form class="form"></contact-form>
-  <hr />
+  <hr *ngIf="!isMobile" />
+  <div class="line" *ngIf="isMobile"></div>
   <div class="location">
     <iframe
       class="map"
@@ -11,11 +12,11 @@
       style="border:0;"
       allowfullscreen=""
     ></iframe>
-    <h3>Proudly Serving Houston, TX</h3>
-    <p>
+    <h3 class="text">Proudly Serving Houston, TX</h3>
+    <p class="text">
       Give us a call at 713-XXX-XXXX or fill out the form and we’ll get back to
       you promptly.
     </p>
-    <p>We’re excited to meet you!</p>
+    <p class="text">We’re excited to meet you!</p>
   </div>
 </div>

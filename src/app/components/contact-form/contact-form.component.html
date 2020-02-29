@@ -1,5 +1,10 @@
 <h3 class="header">Get in Touch With Us</h3>
-<form [formGroup]="contactForm" name="contact" method="post">
+<form
+  [formGroup]="contactForm"
+  name="contact"
+  method="post"
+  [ngClass]="{ mobile: isMobile || hamburgerMenu }"
+>
   <input class="form-row" type="hidden" name="form-name" value="contact" />
   <div style="display: none;">
     <input name="bot-field" />
@@ -12,7 +17,7 @@
     placeholder="NAME"
     required
   />
-  <div class="short-row">
+  <div class="short-row" *ngIf="!isMobile && !hamburgerMenu">
     <input
       class="form-row"
       type="email"
@@ -31,6 +36,25 @@
       required
     />
   </div>
+  <input
+    *ngIf="isMobile || hamburgerMenu"
+    class="form-row"
+    type="email"
+    name="email"
+    formControlName="email"
+    placeholder="EMAIL"
+    required
+  />
+  <div class="spacer" *ngIf="!isMobile && !hamburgerMenu"></div>
+  <input
+    *ngIf="isMobile || hamburgerMenu"
+    class="form-row"
+    type="text"
+    name="phone"
+    formControlName="phone"
+    placeholder="PHONE"
+    required
+  />
   <textarea
     class="form-row textarea"
     id="message"

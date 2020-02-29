@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { HttpClient, HttpParams } from '@angular/common/http'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'contact-form',
@@ -16,9 +18,26 @@ export class ContactFormComponent implements OnInit {
   })
   showErrorState = false
 
-  constructor(private http: HttpClient) {}
+  hamburgerMenu: boolean
+  isMobile: boolean
+  hamburgerMenuSubscription: Subscription
+  mobileSubscription: Subscription
 
-  ngOnInit() {}
+  constructor(private http: HttpClient, private appService: AppService) {}
+
+  ngOnInit() {
+    this.hamburgerMenuSubscription = this.appService.hamburgerMenu.subscribe(
+      hamburgerMenu => (this.hamburgerMenu = hamburgerMenu)
+    )
+    this.mobileSubscription = this.appService.isMobile.subscribe(
+      isMobile => (this.isMobile = isMobile)
+    )
+  }
+
+  ngOnDestroy() {
+    this.hamburgerMenuSubscription.unsubscribe()
+    this.mobileSubscription.unsubscribe()
+  }
 
   onSubmit() {
     if (!this.contactForm.valid) {

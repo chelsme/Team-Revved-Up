@@ -9,14 +9,24 @@ import { AppService } from 'src/app/app.service'
 })
 export class NavComponent implements OnInit {
   hamburgerMenu: boolean
+  isMobile: boolean
   hamburgerMenuSubscription: Subscription
+  mobileSubscription: Subscription
 
   constructor(private appService: AppService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.hamburgerMenuSubscription = this.appService.hamburgerMenu.subscribe(
       hamburgerMenu => (this.hamburgerMenu = hamburgerMenu)
     )
+    this.mobileSubscription = this.appService.isMobile.subscribe(
+      isMobile => (this.isMobile = isMobile)
+    )
+  }
+
+  ngOnDestroy() {
+    this.hamburgerMenuSubscription.unsubscribe()
+    this.mobileSubscription.unsubscribe()
   }
 
   goTo(location: string): void {

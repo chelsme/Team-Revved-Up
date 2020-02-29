@@ -1,4 +1,5 @@
-.container {
+.container,
+.mobile {
   align-items: center;
   display: flex;
   height: 550px;
@@ -35,5 +36,19 @@
     position: absolute;
     right: 0;
     width: 50%;
+  }
+}
+
+.mobile {
+  padding-top: 50px;
+
+  .text {
+    width: 100%;
+
+    h2,
+    h5,
+    app-button {
+      min-width: 300px;
+    }
   }
 }

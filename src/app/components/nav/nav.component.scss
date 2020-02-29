@@ -18,10 +18,11 @@ nav {
   }
 }
 
-.hamburger-nav {
+.mobile {
   flex-direction: column;
-  padding: calc(50vh - 88px);
-  width: unset;
+  padding-left: calc(50vw - 200px);
+  padding-top: calc(50vh - 88px);
+  width: 400px;
 
   .link {
     padding: 20px;
