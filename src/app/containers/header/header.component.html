@@ -6,10 +6,11 @@
       <h5>Carpet and Tile Cleaning</h5>
     </div>
   </div>
-  <nav>
+  <nav *ngIf="!hamburgerMenu">
     <div class="link" (click)="goTo('team')">Who We Are</div>
     <div class="link" (click)="goTo('services')">What We Do</div>
     <!-- <div (click)="goTo('testimonials')">Customer Testimonials</div> -->
     <app-button text="Get in Touch" (click)="goTo('contact')"></app-button>
   </nav>
+  <hamburger-menu *ngIf="hamburgerMenu"></hamburger-menu>
 </header>

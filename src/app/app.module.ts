@@ -13,8 +13,9 @@ import { HeroComponent } from './containers/hero/hero.component'
 import { TestimonialsComponent } from './containers/testimonials/testimonials.component'
 import { ContactComponent } from './containers/contact/contact.component'
 import { ServicesComponent } from './containers/services/services.component'
-import { TeamComponent } from './containers/team/team.component';
+import { TeamComponent } from './containers/team/team.component'
 import { ProfilePanelComponent } from './components/profile-panel/profile-panel.component'
+import { HamburgerMenuComponent } from './components/hamburger-menu/hamburger-menu.component'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProfilePanelComponent } from './components/profile-panel/profile-panel.
     ServicesComponent,
     TeamComponent,
     ProfilePanelComponent,
+    HamburgerMenuComponent,
   ],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],

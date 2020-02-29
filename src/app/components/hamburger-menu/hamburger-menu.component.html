@@ -1,0 +1,10 @@
+<div [ngClass]="{ 'hamburger-menu': hamburgerOpen }">
+  <div
+    [class]="hamburgerOpen ? 'hamburger-icon active' : 'hamburger-icon'"
+    (click)="toggleHamburgerMenu()"
+  >
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+</div>

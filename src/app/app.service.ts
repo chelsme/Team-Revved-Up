@@ -5,7 +5,8 @@ import { BehaviorSubject, Observable, fromEvent } from 'rxjs'
   providedIn: 'root',
 })
 export class AppService {
-  public isMobile = new BehaviorSubject<boolean>(window.innerWidth <= 575)
+  public hamburgerMenu = new BehaviorSubject<boolean>(window.innerWidth <= 700)
+  public isMobile = new BehaviorSubject<boolean>(window.innerWidth <= 700)
   private resizeObservable: Observable<Event>
 
   constructor() {
@@ -14,7 +15,7 @@ export class AppService {
   }
 
   private widthCheck() {
-    this.isMobile.next(window.innerWidth <= 575)
-    console.log('is mobile? ', window.innerWidth, this.isMobile.value)
+    this.hamburgerMenu.next(window.innerWidth <= 950)
+    this.isMobile.next(window.innerWidth <= 700)
   }
 }

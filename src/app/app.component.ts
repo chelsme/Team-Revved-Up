@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, OnChanges } from '@angular/core'
+import { Component, OnInit, OnDestroy } from '@angular/core'
 import { Subscription } from 'rxjs'
 import { AppService } from './app.service'
 
@@ -7,7 +7,7 @@ import { AppService } from './app.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, OnDestroy, OnChanges {
+export class AppComponent implements OnInit, OnDestroy {
   isMobile: boolean
   mobileSubscription: Subscription
 
@@ -17,10 +17,6 @@ export class AppComponent implements OnInit, OnDestroy, OnChanges {
     this.mobileSubscription = this.appService.isMobile.subscribe(
       isMobile => (this.isMobile = isMobile)
     )
-  }
-
-  ngOnChanges() {
-    console.log('MOBILE: ', this.isMobile)
   }
 
   ngOnDestroy() {

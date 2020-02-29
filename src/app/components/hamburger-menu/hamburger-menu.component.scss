@@ -1,0 +1,48 @@
+.hamburger-menu {
+  background-color: var(--grey);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 20;
+}
+
+.hamburger-icon .line {
+  background-color: var(--white);
+  display: block;
+  height: 5px;
+  margin: 8px auto;
+  width: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon {
+  position: absolute;
+  right: 30px;
+  top: 27px;
+}
+
+.hamburger-icon:hover {
+  cursor: pointer;
+}
+
+.hamburger-icon.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.active .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger-icon.active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
+}
