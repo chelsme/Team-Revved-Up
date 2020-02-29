@@ -44,3 +44,22 @@
     }
   }
 }
+
+.mobile {
+  .team {
+    flex-wrap: wrap;
+    profile-panel {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  .tru {
+    flex-direction: column;
+
+    p {
+      margin-top: 30px;
+      width: unset;
+    }
+  }
+}

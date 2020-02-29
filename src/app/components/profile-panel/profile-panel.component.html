@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" [ngClass]="{ mobile: isMobile }">
   <img [src]="img" [alt]="title" />
   <h4 class="text">{{ title }}</h4>
   <h5 class="text" *ngIf="subtitle">{{ subtitle }}</h5>

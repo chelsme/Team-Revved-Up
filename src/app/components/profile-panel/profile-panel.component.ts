@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core'
+import { Subscription } from 'rxjs'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'profile-panel',
@@ -11,9 +13,20 @@ export class ProfilePanelComponent implements OnInit {
   @Input() subtitle
   @Input() blurb
 
-  constructor() {}
+  isMobile: boolean
+  mobileSubscription: Subscription
 
-  ngOnInit(): void {
+  constructor(private appService: AppService) {}
+
+  ngOnInit() {
     this.img = `assets/${this.img}.png`
+
+    this.mobileSubscription = this.appService.isMobile.subscribe(
+      isMobile => (this.isMobile = isMobile)
+    )
+  }
+
+  ngOnDestroy() {
+    this.mobileSubscription.unsubscribe()
   }
 }
