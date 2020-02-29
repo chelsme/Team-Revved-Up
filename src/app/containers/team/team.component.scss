@@ -46,11 +46,15 @@
 }
 
 .mobile {
+  h3 {
+    margin-bottom: 20px;
+  }
+
   .team {
     flex-wrap: wrap;
     profile-panel {
-      margin-top: 30px;
-      width: 100%;
+      margin: 30px auto;
+      width: 95%;
     }
   }
 

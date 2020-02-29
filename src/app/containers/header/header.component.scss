@@ -24,6 +24,12 @@ header {
   }
 }
 
-.mobile .brand div {
-  padding-left: unset;
+.mobile .brand {
+  div {
+    padding-left: unset;
+  }
+
+  .guy {
+    display: none;
+  }
 }
