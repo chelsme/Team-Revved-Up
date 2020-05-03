@@ -3,7 +3,7 @@
   [formGroup]="contactForm"
   name="contact"
   method="post"
-  [ngClass]="{ mobile: isMobile || hamburgerMenu }"
+  [ngClass]="{ mobile: isMobile || mediumWidth }"
 >
   <input class="form-row" type="hidden" name="form-name" value="contact" />
   <div style="display: none;">
@@ -17,7 +17,7 @@
     placeholder="NAME"
     required
   />
-  <div class="short-row" *ngIf="!isMobile && !hamburgerMenu">
+  <div class="short-row" *ngIf="!isMobile && !mediumWidth">
     <input
       class="form-row"
       type="email"
@@ -37,7 +37,7 @@
     />
   </div>
   <input
-    *ngIf="isMobile || hamburgerMenu"
+    *ngIf="isMobile || mediumWidth"
     class="form-row"
     type="email"
     name="email"
@@ -45,9 +45,9 @@
     placeholder="EMAIL"
     required
   />
-  <div class="spacer" *ngIf="!isMobile && !hamburgerMenu"></div>
+  <div class="spacer" *ngIf="!isMobile && !mediumWidth"></div>
   <input
-    *ngIf="isMobile || hamburgerMenu"
+    *ngIf="isMobile || mediumWidth"
     class="form-row"
     type="text"
     name="phone"

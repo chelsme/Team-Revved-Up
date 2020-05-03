@@ -8,16 +8,16 @@ import { AppService } from 'src/app/app.service'
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-  hamburgerMenu: boolean
+  mediumWidth: boolean
   isMobile: boolean
-  hamburgerMenuSubscription: Subscription
+  mediumWidthSubscription: Subscription
   mobileSubscription: Subscription
 
   constructor(private appService: AppService) {}
 
   ngOnInit() {
-    this.hamburgerMenuSubscription = this.appService.hamburgerMenu.subscribe(
-      hamburgerMenu => (this.hamburgerMenu = hamburgerMenu)
+    this.mediumWidthSubscription = this.appService.mediumWidth.subscribe(
+      mediumWidth => (this.mediumWidth = mediumWidth)
     )
     this.mobileSubscription = this.appService.isMobile.subscribe(
       isMobile => (this.isMobile = isMobile)
@@ -25,7 +25,7 @@ export class NavComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.hamburgerMenuSubscription.unsubscribe()
+    this.mediumWidthSubscription.unsubscribe()
     this.mobileSubscription.unsubscribe()
   }
 

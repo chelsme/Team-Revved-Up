@@ -18,16 +18,16 @@ export class ContactFormComponent implements OnInit {
   })
   showErrorState = false
 
-  hamburgerMenu: boolean
+  mediumWidth: boolean
   isMobile: boolean
-  hamburgerMenuSubscription: Subscription
+  mediumWidthSubscription: Subscription
   mobileSubscription: Subscription
 
   constructor(private http: HttpClient, private appService: AppService) {}
 
   ngOnInit() {
-    this.hamburgerMenuSubscription = this.appService.hamburgerMenu.subscribe(
-      hamburgerMenu => (this.hamburgerMenu = hamburgerMenu)
+    this.mediumWidthSubscription = this.appService.mediumWidth.subscribe(
+      mediumWidth => (this.mediumWidth = mediumWidth)
     )
     this.mobileSubscription = this.appService.isMobile.subscribe(
       isMobile => (this.isMobile = isMobile)
@@ -35,7 +35,7 @@ export class ContactFormComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.hamburgerMenuSubscription.unsubscribe()
+    this.mediumWidthSubscription.unsubscribe()
     this.mobileSubscription.unsubscribe()
   }
 

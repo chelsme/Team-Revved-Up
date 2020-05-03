@@ -5,8 +5,8 @@ import { BehaviorSubject, Observable, fromEvent } from 'rxjs'
   providedIn: 'root',
 })
 export class AppService {
-  public hamburgerMenu = new BehaviorSubject<boolean>(
-    window.innerWidth <= 950 && 700 <= window.innerWidth
+  public mediumWidth = new BehaviorSubject<boolean>(
+    window.innerWidth <= 1000 && 700 <= window.innerWidth
   )
   public isMobile = new BehaviorSubject<boolean>(window.innerWidth <= 700)
   public hamburgerOpen = new BehaviorSubject<boolean>(false)
@@ -18,9 +18,7 @@ export class AppService {
   }
 
   private widthCheck() {
-    this.hamburgerMenu.next(
-      window.innerWidth <= 950 && 700 <= window.innerWidth
-    )
+    this.mediumWidth.next(window.innerWidth <= 1000 && 700 <= window.innerWidth)
     this.isMobile.next(window.innerWidth <= 700)
   }
 }

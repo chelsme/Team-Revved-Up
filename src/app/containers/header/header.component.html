@@ -6,6 +6,6 @@
       <h5>Carpet and Tile Cleaning</h5>
     </div>
   </div>
-  <app-nav *ngIf="!hamburgerMenu && !isMobile"></app-nav>
-  <hamburger-menu *ngIf="hamburgerMenu || isMobile"></hamburger-menu>
+  <app-nav *ngIf="!mediumWidth && !isMobile"></app-nav>
+  <hamburger-menu *ngIf="mediumWidth || isMobile"></hamburger-menu>
 </header>

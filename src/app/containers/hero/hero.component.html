@@ -1,4 +1,6 @@
-<div [class]="isMobile ? 'mobile' : 'container'">
+<div
+  [class]="isMediumWidth ? 'mediumWidth' : isMobile ? 'mobile' : 'container'"
+>
   <div class="text">
     <h2>
       Personalized and Personable Residential and Commercial Cleaning in Houston
@@ -10,5 +12,7 @@
     </h5>
     <app-button text="Get in Touch" (click)="goTo('contact')"></app-button>
   </div>
-  <div class="img" *ngIf="!isMobile"></div>
+  <div class="img">
+    <img src="../../../assets/team.jpg" alt="team" />
+  </div>
 </div>

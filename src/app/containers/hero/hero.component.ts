@@ -9,7 +9,9 @@ import { AppService } from 'src/app/app.service'
 })
 export class HeroComponent implements OnInit {
   isMobile: boolean
+  isMediumWidth: boolean
   mobileSubscription: Subscription
+  mediumWidthSubscription: Subscription
 
   constructor(private appService: AppService) {}
 
@@ -17,10 +19,14 @@ export class HeroComponent implements OnInit {
     this.mobileSubscription = this.appService.isMobile.subscribe(
       isMobile => (this.isMobile = isMobile)
     )
+    this.mediumWidthSubscription = this.appService.mediumWidth.subscribe(
+      mediumWidth => (this.isMediumWidth = mediumWidth)
+    )
   }
 
   ngOnDestroy() {
     this.mobileSubscription.unsubscribe()
+    this.mediumWidthSubscription.unsubscribe()
   }
 
   goTo(location: string): void {
