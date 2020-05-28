@@ -39,7 +39,7 @@ export class TeamComponent implements OnInit {
 
   ngOnInit() {
     this.mobileSubscription = this.appService.isMobile.subscribe(
-      isMobile => (this.isMobile = isMobile)
+      (isMobile) => (this.isMobile = isMobile)
     )
   }
 
