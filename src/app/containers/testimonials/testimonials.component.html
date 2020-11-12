@@ -1,1 +1,20 @@
-<p>testimonials works!</p>
+<div class="container" [ngClass]="{ mobile: isMobile }">
+  <button (click)="changeTestimonial('back')">
+    <img class="left-caret" src="assets/caret.png" alt="caret" />
+  </button>
+  <div class="rating">
+    <div class="star-container">
+      <img
+        class="star"
+        *ngFor="let i of [].constructor(displayedTestimonial.rating)"
+        src="assets/star.png"
+        alt="star"
+      />
+    </div>
+    <p>{{ displayedTestimonial.comment }}</p>
+    <p>{{ displayedTestimonial.name }}</p>
+  </div>
+  <button (click)="changeTestimonial('next')">
+    <img class="right-caret" src="assets/caret.png" alt="caret" />
+  </button>
+</div>

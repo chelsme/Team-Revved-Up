@@ -1,6 +1,48 @@
 .container {
+  color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1200px;
-  padding: 50px 0 100px;
+  padding: 100px 0;
   width: 100%;
+
+  button {
+    background-color: transparent;
+    border: none;
+    height: 30px;
+
+    img {
+      height: inherit;
+    }
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .left-caret {
+    transform: rotate(180deg);
+  }
+
+  p {
+    padding: 10px;
+  }
+
+  .rating {
+    padding: 0 50px;
+
+    .star-container {
+      display: flex;
+      padding: 10px;
+
+      .star {
+        height: 20px;
+      }
+    }
+  }
+}
+
+.mobile .rating {
+  padding: 0;
 }
