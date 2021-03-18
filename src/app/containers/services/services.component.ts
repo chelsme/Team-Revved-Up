@@ -34,7 +34,7 @@ export class ServicesComponent implements OnInit {
       img: 'duct-cleaning',
       title: 'Air Duct Cleaning',
       blurb:
-        'Do you fill your vacuum cannister in every room that you vacuum? Too much dust on your hard surfaces only 2 days after cleaning? Do your or a family member suffer from allergies or asthma? You should have your air ducts cleaned every 3-5 years to keep the air that you breathe healthier.',
+        'Do you fill your vacuum cannister in every room that you vacuum? Too much dust on your hard surfaces only 2 days after cleaning? Do you or a family member suffer from allergies or asthma? You should have your air ducts cleaned every 3-5 years to keep the air that you breathe healthier.',
     },
     {
       img: 'floor-resurfacing',
@@ -68,7 +68,7 @@ export class ServicesComponent implements OnInit {
     },
   ]
 
-  constructor(private appService: AppService) {}
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
     this.mobileSubscription = this.appService.isMobile.subscribe(
